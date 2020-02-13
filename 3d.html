@@ -1,1 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>love</title>
+</head>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+		text-decoration:none;
+	}
+	body{
+		background: #444;
+	}
+	.cube-wrap{
+		width: 200px;
+		height: 200px;
+		margin: 150px 250px;
+		perspective: 800px;/*设置距眼离*/
 
+	}
+
+	.cube-wrap:target .cube{
+		width: 200px;
+		height: 200px;
+		transform-style: preserve-3d;
+		animation: cube 5s ease-in-out infinite;
+	}
+	@keyframes cube{
+		0%{
+			transform: rotate3d(5,4,4,0deg);
+		}
+		25%{
+			transform: rotate3d(4,4,4,180deg);
+		}
+		50%{
+			transform: rotate3d(4,4,4,360deg);
+		}
+		75%{
+			transform: rotate3d(-4,5,9,180deg);
+		}
+		100%{
+			transform: rotate3d(-4,5,9,360deg);
+		}
+	}
+	
+
+	.cube-wrap:target .xbox{
+		top: 200px;
+	}
+	.cube-wrap:target .sbox{
+		top: -100px;
+	}
+	.cube-wrap:target .zbox{
+		left: -100px;
+	}
+	.cube-wrap:target .ybox{
+		left: 200px;
+	}
+	.cube-wrap:target .cbox{
+		box-shadow: 0 0 5px #fff,
+				0 0 0px #fff,
+				0 0 5px #fff,
+				0 0 15px #fff;
+	}
+	.cube-wrap:target .qbox,
+	.cube-wrap:target .hbox,
+	.cube-wrap:target .zbox,
+	.cube-wrap:target .ybox,
+	.cube-wrap:target .sbox,
+	.cube-wrap:target .xbox{
+		box-shadow: 0 0 5px #ffaaaa,
+					0 0 0px #fff,
+					0 0 5px #fff,
+					0 0 15px #ffaaaa;
+	}
+
+	.cube-wrap:target .qshang{
+		transform: translateZ(150px) rotateX(90deg) translateZ(50px);
+	}
+	.cube-wrap:target .qxia{
+		transform: translateZ(150px) rotateX(90deg) translateZ(-50px);
+	}
+	.cube-wrap:target .qzuo{
+		transform: translateZ(150px) rotateY(90deg) translateZ(-50px);
+	}
+	.cube-wrap:target .qyou{
+		transform: translateZ(150px) rotateY(90deg) translateZ(50px);
+	}
+	.cube-wrap:target .qqian{
+		transform: translateZ(200px);
+	}
+	.cube-wrap:target .qhou{
+		transform: translateZ(100px);
+	}
+	.cube-wrap:target .hshang{
+		transform: translateZ(-150px) rotateX(90deg) translateZ(50px);
+	}
+	.cube-wrap:target .hxia{
+		transform: translateZ(-150px) rotateX(90deg) translateZ(-50px);
+	}
+	.cube-wrap:target .hzuo{
+		transform: translateZ(-150px) rotateY(90deg) translateZ(-50px);
+	}
+	.cube-wrap:target .hyou{
+		transform: translateZ(-150px) rotateY(90deg) translateZ(50px);
+	}
+	.cube-wrap:target .hqian{
+		transform: translateZ(-200px);
+	}
+	.cube-wrap:target .hhou{
+		transform: translateZ(-100px);
+	}
+
+	.cbox,
+	.sbox,
+	.xbox,
+	.zbox,
+	.ybox,
+	.qbox,
+	.hbox{
+		background: #999;
+		top: 50px;
+		left: 50px;
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		transition: 3s;
+	}
+	
+	.gshang,
+	.sshang,
+	.xshang,
+	.zshang,
+	.yshang{
+		transform: rotateX(90deg) translateZ(50px);
+	/*	background-image: url(image/tp5.jpg);
+		background-size: cover;*/
+	}
+	.gxia,
+	.sxia,
+	.xxia,
+	.zxia,
+	.yxia{
+		transform: rotateX(90deg) translateZ(-50px);
+	/*	background-image: url(image/tp3.jpg);
+		background-size: cover;*/
+	}
+	.gzuo,
+	.szuo,
+	.xzuo,
+	.zzuo,
+	.yzuo{
+		transform: rotateY(90deg) translateZ(50px);
+	}
+	.gyou,
+	.syou,
+	.xyou,
+	.zyou,
+	.yyou{
+		transform: rotateY(90deg) translateZ(-50px);
+	/*	background-image: url(image/tp6.jpg);
+		background-size: cover;*/
+	}
+	.gqian,
+	.sqian,
+	.xqian,
+	.zqian,
+	.yqian{
+		transform: translateZ(50px);
+		/*background-image: url(image/tp4.jpg);
+		background-size: cover;*/
+	}
+	.ghou,
+	.shou,
+	.xhou,
+	.zhou,
+	.yhou{
+		transform: translateZ(-50px);
+	/*	background-image: url(image/tp8.jpg);
+		background-size: cover;*/
+	}
+
+
+	.sshang,
+	.sxia,
+	.szuo,
+	.syou,
+	.sqian,
+	.shou{
+		background-image: url(https://mmbiz.qpic.cn/mmbiz_jpg/jZUzgXiaBqZlJhI5mfDtFpMvXcogDyAvoHZsyS4flKF7k51qgyjkgy706pOHItdUWQHmt5GoAzQyfOiauQ4VKQFg/0?wx_fmt=jpeg);
+		background-size: cover;
+	}
+	.xshang,
+	.xxia,
+	.xzuo,
+	.xyou,
+	.xqian,
+	.xhou{
+		background-image: url(https://mmbiz.qpic.cn/mmbiz_jpg/jZUzgXiaBqZlJhI5mfDtFpMvXcogDyAvoe1LZQAXZJIwySwvTObvYshVTJTdRich4wXsDuyydiaomsL0EVfbgmz3Q/0?wx_fmt=jpeg);
+		background-size: cover;
+	}
+	.zshang,
+	.zxia,
+	.zzuo,
+	.zyou,
+	.zqian,
+	.zhou{
+		background-image: url(https://mmbiz.qpic.cn/mmbiz_jpg/jZUzgXiaBqZlJhI5mfDtFpMvXcogDyAvoTfOTAvffdrDPDrh0TwP39rVick9JHEDSzRKMtUwMsfcDAgAyADMQGPA/0?wx_fmt=jpeg);
+		background-size: cover;
+	}
+	.yshang,
+	.yxia,
+	.yzuo,
+	.yyou,
+	.yqian,
+	.yhou{
+		background-image: url(https://mmbiz.qpic.cn/mmbiz_jpg/jZUzgXiaBqZlJhI5mfDtFpMvXcogDyAvoRCzZK6L2pkh7Fahp1AzgBMBzWSUIm8NwNsJmFicksaWcXE2FpCcmvQw/0?wx_fmt=jpeg);
+		background-size: cover;
+	}
+	.qshang,
+	.qxia,
+	.qzuo,
+	.qyou,
+	.qqian,
+	.qhou{
+		background-image: url(https://mmbiz.qpic.cn/mmbiz_jpg/jZUzgXiaBqZlJhI5mfDtFpMvXcogDyAvoWr0KR6ssBuKaEeCm643ic9IiaGibuo9mS6hqoA0YNB4WeY0tWODXpPVuA/0?wx_fmt=jpeg);
+		background-size: cover;
+	}
+	.hshang,
+	.hxia,
+	.hzuo,
+	.hyou,
+	.hqian,
+	.hhou{
+		background-image: url(https://mmbiz.qpic.cn/mmbiz_jpg/jZUzgXiaBqZlJhI5mfDtFpMvXcogDyAvoUEPqULpRgRO9nSHStK69Bhhl6gelQvcqIwBF0icBTT02CJSCweOT8OQ/0?wx_fmt=jpeg);
+		background-size: cover;
+	}
+	.gshang,
+	.gxia,
+	.gzuo,
+	.gyou,
+	.gqian,
+	.ghou{
+		background-image: url(https://mmbiz.qpic.cn/mmbiz_jpg/jZUzgXiaBqZlJhI5mfDtFpMvXcogDyAvo4tWb5wfT1Sd4MLO2dkHlC9ylIFLBfB2xMI0FFojPcncxjcnpnR9J8w/0?wx_fmt=jpeg);
+		background-size: cover;
+	}
+
+
+
+
+
+
+
+
+.dabox{
+
+	z-index: 100;
+	transform-style: preserve-3d;
+	transform: translate(-50px,-50px) rotateX(-20deg);
+}
+a{
+	position: absolute;
+	width: 150px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	color: #0bf;
+}
+
+a.start:hover,
+a.restart:hover{
+	background: #ff3333;
+	color: #ffddee;
+	box-shadow: 0 0 5px #ff3333,
+				0 0 25px #ff3333,
+				0 0 50px #ff3333,
+				0 0 200px #ff3333;
+	border-top-left-radius: 72px;
+	border-top-right-radius: 72px;
+}
+a.wen{
+	position: absolute;
+	top: 100px;
+	width: 150px;
+	height: 150px;
+	text-align: center;
+	line-height: 150px;
+}
+a.wen:hover{
+	background: #ff3333;
+	color: #ffddee;
+	box-shadow: 0 0 5px #ff3333,
+				0 0 25px #ff3333,
+				0 0 50px #ff3333,
+				0 0 200px #ff3333;
+
+}
+.bshang{
+	position: absolute;
+	width: 300px;
+	height: 250px;
+	transform: rotateX(70deg) rotateZ(10deg) translateZ(50px);
+	z-index: 100;transform-style: preserve-3d;
+	transition: 3s;
+}
+.bxia{
+	position: absolute;
+	width: 300px;
+	height: 250px;
+	transform: rotateX(70deg) rotateZ(10deg) translateZ(-100px);
+	transition: 3s;
+}
+.sleft{
+	width: 150px;
+	height: 250px;
+	position: absolute;
+	background: #ff5555;
+	box-shadow: 0 0 5px #ff5555,
+				0 0 25px #ff5555,
+				0 0 50px #ff5555,
+				0 0 200px #ff5555;
+	transform: rotateZ(-45deg) translateY(56px);
+	transform-style: preserve-3d;
+	transition: 3s;
+}
+.sright{
+	width: 150px;
+	height: 250px;
+	position: absolute;
+	right: 0;
+	background: #ff6666;
+	box-shadow: 0 0 5px #ff6666,
+				0 0 25px #ff6666,
+				0 0 50px #ff6666,
+				0 0 200px #ff6666;
+	transform: rotateZ(45deg) translateY(56px);
+	transform-style: preserve-3d;
+	transition: 3s;
+}
+.da{
+	width: 150px;
+	height: 250px;
+	position: absolute;
+	background: #ff9999;
+	box-shadow: 0 0 5px #ff9999,
+				0 0 0px #ff9999,
+				0 0 0px #ff9999,
+				0 0 50px #ff9999;
+	z-index: 100;
+
+
+}
+.da1,
+.xiao2{
+	transform: rotateY(90deg) translateZ(-75px) translateX(75px);
+	transition: 3s;
+}
+.da2,
+.xiao1{
+	transform: rotateY(90deg) translateZ(75px) translateX(75px);
+	transition: 3s;
+}
+.zhong{
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	background: #ff9999;
+	transform: rotateX(90deg) translateZ(75px) translateY(-75px);
+	transition: 3s;
+}
+.xiao{
+	width: 150px;
+	height: 100px;
+	position: absolute;
+	background: #ff9999;
+}
+.cube-wrap:target .bshang {
+	transform: translateY(200px);
+}
+.cube-wrap:target .sleft,
+.cube-wrap:target .sright{
+	border-top-left-radius: 72px;
+	border-top-right-radius: 72px;
+}
+.cube-wrap:target .bxia{
+	transform: translateY(500px);
+	opacity: 0;
+}
+.cube-wrap:target .da1{
+	transform: translate(-700px,-300px);
+	opacity: 0;
+}
+.cube-wrap:target .da2{
+	transform: translate(700px,-300px);
+	opacity: 0;
+}
+.cube-wrap:target .zhong,
+.cube-wrap:target .xiao{
+	transform: translateZ(-500px);
+	opacity: 0;
+}
+
+
+</style>
+<body>
+	<div class="cube-wrap" id="bbox">
+		<div class="cube">
+			<!-- 大箱子 -->
+			
+			<!-- 中间 -->
+			<div class="cbox gshang"></div>
+			<div class="cbox gxia"></div>
+			<div class="cbox gzuo"></div>
+			<div class="cbox gyou"></div>
+			<div class="cbox gqian"></div>
+			<div class="cbox ghou"></div>
+			<!-- 上面 -->
+			<div class="sbox sshang"></div>
+			<div class="sbox sxia"></div>
+			<div class="sbox szuo"></div>
+			<div class="sbox syou"></div>
+			<div class="sbox sqian"></div>
+			<div class="sbox shou"></div>
+			<!-- 下面 -->
+			<div class="xbox xshang"></div>
+			<div class="xbox xxia"></div>
+			<div class="xbox xzuo"></div>
+			<div class="xbox xyou"></div>
+			<div class="xbox xqian"></div>
+			<div class="xbox xhou"></div>
+			<!-- 左面 -->
+			<div class="zbox zshang"></div>
+			<div class="zbox zxia"></div>
+			<div class="zbox zzuo"></div>
+			<div class="zbox zyou"></div>
+			<div class="zbox zqian"></div>
+			<div class="zbox zhou"></div>
+
+			<!-- 右面 -->
+			<div class="ybox yshang"></div>
+			<div class="ybox yxia"></div>
+			<div class="ybox yzuo"></div>
+			<div class="ybox yyou"></div>
+			<div class="ybox yqian"></div>
+			<div class="ybox yhou"></div>
+			<!-- 前面 -->
+			<div class="qbox qshang"></div>
+			<div class="qbox qxia"></div>
+			<div class="qbox qzuo"></div>
+			<div class="qbox qyou"></div>
+			<div class="qbox qqian"></div>
+			<div class="qbox qhou"></div>
+			<!-- 后面 -->
+			<div class="hbox hshang"></div>
+			<div class="hbox hxia"></div>
+			<div class="hbox hzuo"></div>
+			<div class="hbox hyou"></div>
+			<div class="hbox hqian"></div>
+			<div class="hbox hhou"></div>
+
+		</div>
+		<div class="dabox">
+			<div class="bshang">
+				<div class="sleft">
+					<a href="#bbox" class="start">打开</a>
+					<div class="da da1"></div>
+					<div class="zhong"></div>
+					<div class="xiao xiao1"></div>
+				</div>
+				<div class="sright">
+					<a href="#tbox" class="restart">停止</a>
+					<div><a href="#" class="wen">o</a></div>
+					<div class="da da2"></div>
+					<div class="zhong"></div>
+					<div class="xiao xiao2"></div>
+				</div>
+			</div>
+			<div class="bxia">
+				<div class="sleft"></div>
+				<div class="sright"></div>
+			</div>
+			
+			
+			
+
+
+		</div>
+
+
+		
+	</div>
+</body>
+</html>
