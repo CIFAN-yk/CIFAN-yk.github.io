@@ -1,0 +1,230 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.other ul{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.other ul li{
+	list-style: none;
+	width: 14%;
+	height: 100%;
+	border-radius: 2px;
+	transform: skewX(-15deg);
+	border: 1px solid #03e9f4;
+	line-height: 60px;
+	text-align: center;
+	background: #2e313100;
+	color: #03e9f4;
+}
+.other li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	transition: 0.5s;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.other li a:hover{
+	background: #03e9f4;
+	color: #2e3131;
+	box-shadow: 0 0 5px #03e9f4,
+				0 0 25px #03e9f4,
+				0 0 50px #03e9f4,
+				0 0 200px #03e9f4;
+}
+.other li:nth-child(1){
+	filter: hue-rotate(45deg);
+}
+.other li:nth-child(2){
+	filter: hue-rotate(90deg);
+}
+.other li:nth-child(3){
+	filter: hue-rotate(135deg);
+}
+.other li:nth-child(4){
+	filter: hue-rotate(180deg);
+}
+.other li:nth-child(5){
+	filter: hue-rotate(225deg);
+}
+.other li:nth-child(6){
+	filter: hue-rotate(270deg);
+}
+.box{
+	width: 100%;
+	height: 100px;
+	background: #444a;
+	margin:4px 0 4px 0;
+	border-radius: 5px;
+	filter: hue-rotate(45deg);
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.box a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.box h3{
+	height: 40px;
+	line-height: 40px;
+	padding-left: 10px;
+	font-size: 20px;
+}
+.box p{
+	padding: 0 10px 0 10px;
+	line-height: 30px;
+	font-size: 16px;
+}
+.box a:hover{
+	display: block;
+	background: linear-gradient(to right,#03e9f4 0%,#62c1ff 50%);
+	color: #2e3131;
+	box-shadow: 0 0 5px #03e9f4,
+				0 0 25px #03e9f4;
+	/* animation: wave 2s ease-in-out infinite; */
+	animation: breathe 3s ease-in-out infinite;
+}
+@keyframes breathe{
+	0%,100%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0.6;
+	}
+}
+@keyframes wave{
+	0%{
+		background: linear-gradient(to right,#03e9f4aa 0%,#62c1ffaa 100%);
+	}
+	10%{
+		background: linear-gradient(to right,#62c1ffbb -80%,#03e9f4bb 20%,#62c1ffbb 120%);
+	}
+	20%{
+		background: linear-gradient(to right,#62c1ffcc -60%,#03e9f4cc 40%,#62c1ffcc 140%);
+	}
+	30%{
+		background: linear-gradient(to right,#62c1ffdd -40%,#03e9f4dd 60%,#62c1ffdd 160%);
+	}
+	40%{
+		background: linear-gradient(to right,#62c1ffee -20%,#03e9f4ee 80%,#62c1ffee 180%);
+	}
+	50%{
+		background: linear-gradient(to right,#62c1ffff 0%,#03e9f4ff 100%);
+	}
+	60%{
+		background: linear-gradient(to right,#03e9f4ee -80%,#62c1ffee 20%,#03e9f4ee 120%);
+	}
+	70%{
+		background: linear-gradient(to right,#03e9f4dd -60%,#62c1ffdd 40%,#03e9f4dd 140%);
+	}
+	80%{
+		background: linear-gradient(to right,#03e9f4cc -40%,#62c1ffcc 60%,#03e9f4cc 160%);
+	}
+	90%{
+		background: linear-gradient(to right,#03e9f4bb -20%,#62c1ffbb 80%,#03e9f4bb 180%);
+	}
+	100%{
+		background: linear-gradient(to right,#03e9f4aa 0%,#62c1ffaa 100%,#03e9f4aa 200%);
+	}
+}
+@media (min-width: 1000px){
+	.other{
+		width: 85%;
+		height: 60px;
+		float: right;
+		padding: 20px 0 20px 0;
+		border-bottom: 1px solid #444;
+	}
+	
+	
+	.container{
+		width: 75%;
+		float: right;
+		margin: 0 5%;
+	}
+	
+}
+@media (max-width: 1000px){
+	.other{
+		width: 80%;
+		margin: 0 10% 0 10%;
+		height: 60px;
+		float: right;
+		border-bottom: 1px solid #444;
+	}
+	.other li a{
+		font-size: 14px!important;
+	}
+	.container{
+		width: 80%;
+		float: right;
+		margin: 0 10%;
+	}
+
+}
+li.tar{
+	animation: tar 5s ease-in-out infinite;
+}
+.tar a{
+	background: #03e9f4;
+	color: #2e3131;
+}
+@keyframes tar{
+	0%{
+		filter:hue-rotate(36deg);
+	}
+	10%{
+		filter:hue-rotate(72deg);
+	}
+	20%{
+		filter:hue-rotate(108deg);
+	}
+	30%{
+		filter:hue-rotate(144deg);
+	}
+	40%{
+		filter:hue-rotate(180deg);
+	}
+	50%{
+		filter:hue-rotate(216deg);
+	}
+	60%{
+		filter:hue-rotate(252deg);
+	}
+	70%{
+		filter:hue-rotate(288deg);
+	}
+	80%{
+		filter:hue-rotate(324deg);
+	}
+	90%{
+		filter:hue-rotate(360deg);
+	}
+	100%{
+		filter:hue-rotate(396deg);
+	}
+}
+.up{
+	position: fixed;
+	right: 20px;
+	bottom: 50px;
+	width: 40px;
+	height: 40px;
+	line-height: 50px;
+	text-align: center;
+	border:1px solid #03e9f4;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+.up:hover{
+	background:#03e9f4;
+	color:#2e3131;
+	animation: tar 5s ease-in-out infinite;
+}
