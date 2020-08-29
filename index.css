@@ -181,8 +181,9 @@ a{
 }
 .learn .h .line{
 	width: 100%;
-	height: 1px;/*
-	background-color: #03e9f4;*/
+	height: 1px;
+	margin-top: 1px;
+	/*background-color: #03e9f4;*/
 	background: linear-gradient(to right,#03e9f4 0%,#62c1ff 50%);
 }
 .learn .h2 .line,
