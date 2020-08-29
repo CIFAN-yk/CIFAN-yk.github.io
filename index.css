@@ -180,7 +180,6 @@ a{
 	color: #03e9f4;
 }
 .learn .h .line{
-	margin-top: 1px;/*确保无缝链接*/
 	width: 100%;
 	height: 1px;/*
 	background-color: #03e9f4;*/
@@ -189,7 +188,7 @@ a{
 .learn .h2 .line,
 .learn .h4 .line,
 .learn .h6 .line{
-	background: linear-gradient(to left,#03e9f4 0%,#62c1ff 50%);
+	background: linear-gradient(to left,#03e9f4,#62c1ff);
 }
 .learn .z1,
 .learn .z2{
