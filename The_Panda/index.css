@@ -1,0 +1,1008 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+html,body{
+    height: 100%;
+}
+
+body{
+    cursor:url("root.png"),auto;
+}
+
+/*滚动条*/
+body::-webkit-scrollbar{
+    width: 10px;
+    box-shadow: -1px 0 5px #111;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: #ccc;
+    border-radius: 50px;
+}
+body::-webkit-scrollbar-track{
+    background-color: #555;
+}
+
+
+/*展示区*/
+.container{
+    width: 100%;
+    height: 100%;
+}
+.box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.box1{
+    background-color: #eee;
+    color: #222;
+}
+.box2{
+    background-color: #111;
+    color:#eee;
+}
+
+.box .part{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    font-family: '腾祥铁山楷书简', cursive;
+    font-size: 150px;
+}
+
+
+/*标题*/
+.box1 .title{
+    font-family: 'Cabin Sketch', cursive;
+    width: 300px;
+    height: 40px;
+    background-color: #111;
+    color: #eee;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    top: 20px;
+    left: -100px;
+    transform: rotateZ(-40deg);
+    z-index: 100;
+}
+.box2 .title{
+    font-family: 'Cabin Sketch', cursive;
+    width: 300px;
+    height: 40px;
+    background-color: #eee;
+    color: #111;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    top: 20px;
+    left: -100px;
+    transform: rotateZ(-40deg);
+    z-index: 100;
+}
+
+.box1 .info{
+    padding: 40px;
+    min-width: 50%;
+    max-width: 55%;
+    /*height: 80%;*/
+    font-size: 28px;
+    line-height: 40px;
+    position: absolute;
+    right: 4%;
+    top: 5%;
+
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #ddd,
+                -5px -5px 5px #fff;
+}
+.box1 .info i{
+    display: inline-block;
+    background-color: #111;
+    color:#eee;
+    border-radius: 0.3em;
+    padding:0 10px;
+    font-style: normal;
+}
+.box2 .info i{
+    display: inline-block;
+    background-color: #ddd;
+    color:#111;
+    border-radius: 0.3em;
+    padding:0 10px;
+    font-style: normal;
+}
+.box1 .info data{
+    padding:0 10px;
+    display: inline-block;
+    border-radius: 0.3em;
+    background-color: #555555;
+    color:#fff;
+    font-style: normal;
+}
+.box1 .info b{
+    padding:0 10px;
+    display: inline-block;
+    border-radius: 0.3em;
+    background-color: #999;
+    color:#fff;
+    font-style: normal;
+}
+.box2 .info b{
+    padding:0 10px;
+    display: inline-block;
+    border-radius: 0.3em;
+    background-color: #555;
+    color:#eee;
+    font-style: normal;
+}
+.box1 .info a{
+    padding:0 10px;
+    display: inline-block;
+    border-radius: 0.3em;
+    background-color: #999;
+    color:#fff;
+    font-style: normal;
+    cursor:url("./root.png"),auto;
+    transition:1s;
+}
+.box2 .info a{
+    padding:0 10px;
+    display: inline-block;
+    border-radius: 0.3em;
+    background-color: #999;
+    color:#fff;
+    font-style: normal;
+    cursor:url("./root.png"),auto;
+    transition:1s;
+}
+.box1 .info a:hover{
+    background-color: #333;
+    color:#999;
+}
+
+next{
+    display: inline-block;
+    border-radius: 0.3em;
+    padding:0 5px;
+}
+
+
+.box ul{
+    list-style: none;
+}
+.box li{
+    padding-left: 1.3em;
+}
+.box li:before{
+    content: "🐼";
+    display: inline-block;
+    margin-left: -1.3em;
+    width: 1.3em;
+}
+.box2 .info{
+    padding: 40px;
+    width: 50%;
+    /*height: 80%;*/
+    font-size: 28px;
+    position: absolute;
+    line-height: 40px;
+    right: 5%;
+    top: 5%;
+
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #000,
+    -5px -5px 5px #222;
+}
+
+/*特殊设置*/
+.long{
+    max-width: 70% !important;
+}
+.center{
+    min-width: 30% !important;
+    max-width: 40% !important;
+    width: 30% !important;
+    right: 32% !important;
+    top: 5% !important;
+}
+.v-center{
+    top:50% !important;
+    transform: translateY(-50%);
+}
+
+/*视频设置*/
+.vlog-pz{
+    padding: 10px 20px;
+    width: 25%;
+    height: auto;
+    /*height: 80%;*/
+    font-size: 28px;
+    position: absolute;
+    background-color: #eee;
+    left: 8%;
+    top: 1%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #fff,
+    -5px -5px 5px #ddd;
+}
+.vlog-zs{
+    padding: 10px 20px;
+    width: 25%;
+    height: auto;
+    /*height: 80%;*/
+    font-size: 28px;
+    position: absolute;
+    background-color: #eee;
+    left: 6%;
+    top: 1%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #fff,
+    -5px -5px 5px #ddd;
+}
+.vlog-fy{
+    padding: 10px 20px;
+    width: 40%;
+    height: auto;
+    /*height: 80%;*/
+    font-size: 28px;
+    position: absolute;
+    left: 6%;
+    top: 52%;
+    background-color: #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #fff,
+    -5px -5px 5px #ddd;
+}
+.vlog-ss{
+    padding: 40px;
+    width: 20%;
+    height: auto;
+    font-size: 28px;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #ddd,
+    -5px -5px 5px #fff;
+}
+.vlog-cs{
+    padding: 40px;
+    width: 20%;
+    height: auto;
+    font-size: 28px;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #ddd,
+    -5px -5px 5px #fff;
+}
+.vlog-bm{
+    padding: 40px;
+    width: 50%;
+    height: auto;
+    font-size: 28px;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #fff,
+    -5px -5px 5px #ddd;
+}
+.vlog-gj{
+    padding: 40px;
+    width: 26%;
+    height: auto;
+    font-size: 28px;
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #000,
+    -5px -5px 5px #222;
+}
+
+.vlog-tj{
+    padding: 40px;
+    width: 26%;
+    height: auto;
+    font-size: 28px;
+    position: absolute;
+    left: 2%;
+    bottom:5%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #000,
+    -5px -5px 5px #222;
+}
+.box2 .vlog{
+    padding: 40px;
+    width: 50%;
+    height: auto;
+    /*height: 80%;*/
+    font-size: 28px;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #000,
+    -5px -5px 5px #222;
+}
+.box .big{
+    width: 70%;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+}
+
+video{
+    width: 100%;
+    border-radius: 6px;
+}
+
+/*图片*/
+.img-bottom{
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    bottom: -5px;
+    background-image: url("./bamboo.png");
+    background-size: 70px 70px;
+}
+.img-b{
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    width: 30%;
+}
+.img1-1{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform:rotateZ(-30deg);
+    width: 15%;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #fff,
+    -5px -5px 5px #ddd;
+}
+.img1-2{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    transform:rotateZ(-30deg);
+    width: 15%;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #fff,
+    -5px -5px 5px #ddd;
+}
+.img2-1{
+    position: absolute;
+    bottom: 32%;
+    left: 42%;
+    transform:rotateZ(-30deg);
+    width: 20%;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #fff,
+    -5px -5px 5px #ddd;
+}
+.img2-2{
+    position: absolute;
+    bottom: 12%;
+    right: 8%;
+    transform:rotateZ(-30deg);
+    width: 20%;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #fff,
+    -5px -5px 5px #ddd;
+}
+.img3-1{
+    position: absolute;
+    bottom: 15%;
+    left: 37%;
+    transform:rotateZ(-10deg);
+    width: 25%;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #fff,
+    -5px -5px 5px #ddd;
+}
+.img3-2{
+    position: absolute;
+    bottom: 12%;
+    right: 8%;
+    transform:rotateZ(-10deg);
+    width: 20%;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #fff,
+    -5px -5px 5px #ddd;
+}
+.img4-1{
+    position: absolute;
+    top: 10%;
+    left: 4%;
+    transform:rotateZ(-30deg);
+    width: 10%;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #fff,
+    -5px -5px 5px #ddd;
+}
+.img4-2{
+    position: absolute;
+    top: 40%;
+    left: 4%;
+    transform:rotateZ(-30deg);
+    width: 10%;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #fff,
+    -5px -5px 5px #ddd;
+}
+
+.img4-3{
+    position: absolute;
+    top: 70%;
+    left: 4%;
+    transform:rotateZ(-30deg);
+    width: 10%;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #fff,
+    -5px -5px 5px #ddd;
+}
+.img5-1{
+    position: absolute;
+    top: 30%;
+    right: 4%;
+    /*transform:rotateZ(-30deg);*/
+    width: 30%;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #fff,
+    -5px -5px 5px #ddd;
+}
+.img6-1{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    /*transform:rotateZ(-30deg);*/
+    width: 10%;
+    padding:40px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #000,
+    -5px -5px 5px #222;
+}
+.img6-2{
+    position: absolute;
+    top: 40%;
+    left: 55%;
+    /*transform:rotateZ(-30deg);*/
+    width: 30%;
+    padding:40px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #000,
+    -5px -5px 5px #222;
+}
+.img7-1{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    /*transform:rotateZ(-30deg);*/
+    width: 30%;
+    padding:40px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #000,
+    -5px -5px 5px #222;
+}
+.img7-2{
+    position: absolute;
+    bottom:2%;
+    left: 2%;
+    /*transform:rotateZ(-30deg);*/
+    width: 30%;
+    padding:40px;
+    border-radius: 20px;
+    background-color: #111;
+    box-shadow: 5px 5px 5px #000,
+    -5px -5px 5px #222;
+}
+.tx .img-tl{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform:rotateZ(-30deg);
+    width: 10%;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #fff,
+    -5px -5px 5px #ddd;
+}
+.tx .img-bl{
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    transform:rotateZ(-30deg);
+    width: 10%;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #fff,
+    -5px -5px 5px #ddd;
+}
+.tx .img-ccl{
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    transform:rotateZ(-30deg);
+    width: 10%;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #fff,
+    -5px -5px 5px #ddd;
+}
+.tx .img-ccr{
+    position: absolute;
+    top: 28%;
+    right: 27%;
+    transform:rotateZ(-30deg);
+    width: 6%;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #fff,
+    -5px -5px 5px #ddd;
+}
+.tx .img-cr{
+    position: absolute;
+    bottom: 38%;
+    right: 12%;
+    transform:rotateZ(-30deg);
+    width: 10%;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #fff,
+    -5px -5px 5px #ddd;
+}
+.tx .img-ccc{
+    position: absolute;
+    bottom: 30%;
+    left: 45%;
+    transform:rotateZ(-30deg);
+    width: 10%;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #fff,
+    -5px -5px 5px #ddd;
+}
+.tx .img-bcr{
+    position: absolute;
+    bottom: 10%;
+    right: 25%;
+    transform:rotateZ(-30deg);
+    width: 10%;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #fff,
+    -5px -5px 5px #ddd;
+}
+.tx .img-bcc{
+    position: absolute;
+    bottom: 6%;
+    left: 50%;
+    transform:rotateZ(-30deg);
+    width: 10%;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #fff,
+    -5px -5px 5px #ddd;
+}
+.tx .img-br{
+    position: absolute;
+    bottom: 8%;
+    left: 84%;
+    transform:rotateZ(-30deg);
+    width: 10%;
+    padding:20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #fff,
+    -5px -5px 5px #ddd;
+}
+
+
+
+
+.box img{
+    width: 100%;
+}
+
+/*翻页*/
+.nextL{
+      width: 60px;
+      height: 90px;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      filter: hue-rotate(120deg);
+      position: fixed;
+      top: 0px;
+      right: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition:0.5s;
+  }
+.nextR{
+    width: 60px;
+    height: 90px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    filter: hue-rotate(120deg);
+    position: fixed;
+    bottom: 0px;
+    right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:0.5s;
+}
+.boxShadow1{
+    background-color: #eee!important;
+    box-shadow: 5px 5px 5px #fff,
+    -3px -4px 5px #ccc!important;
+    color:#111!important;
+}
+.boxShadow2{
+    background-color: #111!important;
+    box-shadow: 5px 5px 5px #000,
+    -3px -3px 5px #222!important;
+    color:#eee!important;
+}
+
+.target{
+    position: fixed;
+    padding: 30px 30px;
+    font-size: 22px;
+    color: #333;
+    top: 50%;
+    left: 50%;
+    border-radius: 2em;
+    transform: translate(-50%,-50%);
+    min-width: 30%;
+    max-width: 60%;
+    min-height: 40%;
+    max-height: 70%;
+    transition: 0.5s;
+    z-index: 2000;
+}
+
+/*音乐*/
+audio{
+    display: none;
+}
+.audio{
+    position: fixed;
+    top: 50%;
+    right: 0;
+    width: 5em;
+    height: 3em;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.audio img{
+    width: 2em;
+    height: 2em;
+}
+
+
+/*答题*/
+.question{
+    width: 50%;
+    height: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 30px;
+    background: #111;
+    color: #eee;
+    box-shadow: 5px 5px 5px #000,
+                -3px -3px 5px #222;
+    z-index: 100;
+
+}
+.question .message{
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    height: 30px;
+}
+.question .items{
+    width: 100%;
+    height: calc(100% - 30px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.question .items::-webkit-scrollbar{
+    width: 0;
+}
+.question .items .item{
+    width: 100%;
+    height: 100%;
+    border-bottom:1px solid #333;
+    position: relative;
+}
+.question .items .item .q{
+    width: 100%;
+    height: 15%;
+}
+.question .items .item .s{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.question .items .item .s .option{
+    width: 100%;
+    height: 1.5em;
+    position: relative;
+    transition:1s;
+    line-height: 1.5em;
+    padding-top:1em;
+    padding-bottom: 1em;
+}
+.boxShadow1 .items .item .s .option:hover{
+    background: #111;
+    color:#eee;
+}
+.boxShadow2 .items .item .s .option:hover{
+    background: #eee;
+    color:#111;
+}
+
+.boxShadow2 .items .item .s .check{
+    padding-left: 2em;
+    background: #111;
+}
+.boxShadow1 .items .item .s .check{
+     padding-left: 2em;
+     background: #eee;
+ }
+.question .items .item .s check:hover{
+    background: #eee!important;
+}
+.boxShadow1 .items .item .s check:hover{
+    background: #111!important;
+}
+.boxShadow2 .items .item .s .check:before{
+    content: "";
+    color:#eee;
+    position: absolute;
+    left:0;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 0.75em;
+    background-color: #eee;;
+    background-image:url("./bamboo.png");
+    background-size: 100%;
+}
+.boxShadow1 .items .item .s .check:before{
+    content: "";
+    color:#eee;
+    position: absolute;
+    left:0;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 0.75em;
+    background-color: #111;;
+    background-image:url("./bamboo.png");
+    background-size: 100%;
+}
+.question .items .item .yes{
+    background: red;
+}
+.question .items .item .yes:after{
+    content: "";
+    position: absolute;
+    right:4em;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 0.75em;
+    background-image:url("./panda.png");
+    background-size: 100%;
+    transform: rotateY(180deg);
+    background-color:#eee;
+}
+.question .items .item .show{
+    position: absolute;
+    bottom: 0;
+    right: 30%;
+    width: 4em;
+    height: 2em;
+    text-align: center;
+    line-height: 2em;
+    border-top-left-radius: 0.3em;
+    border-top-right-radius: 0.3em;
+    box-shadow: 5px 5px 5px #000,
+                -4px -4px 5px #222;
+}
+
+.lastQ{
+    position: absolute;
+    bottom:10px;
+    left: 40px;
+    width: 4em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    box-shadow: 5px 5px 5px #000,
+    -4px -4px 5px #222;
+}
+.nextQ{
+    position: absolute;
+    bottom:10px;
+    right: 40px;
+    width: 4em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    box-shadow: 5px 5px 5px #000,
+    -4px -4px 5px #222;
+}
+.submit{
+    position: absolute;
+    bottom:10px;
+    left: 50%;
+    width: 4em;
+    height: 2em;
+    line-height: 2em;
+    text-align: center;
+    box-shadow: 5px 5px 5px #000,
+    -4px -4px 5px #222;
+}
+
+.showQ{
+    position: fixed;
+    top: 30%;
+    right: 0;
+    width: 5em;
+    height: 3em;
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+/**/
+.panda {
+    font-size: 10px;
+    top: 10%;
+    left: 40%;
+    width:21em;
+    height:16em;
+    background-color:white;
+    background-image:radial-gradient(ellipse at 50% 60%,#333 1.2em,transparent 1.2em),radial-gradient(ellipse at 50% 80%,#555 0.6em,transparent 0.6em);
+    border:0.5em solid #333;
+    border-top-left-radius:11em;
+    border-top-right-radius:11em;
+    border-bottom-left-radius:11em 6em;
+    border-bottom-right-radius:11em 6em;
+    border-bottom-width:1em;
+    box-shadow:inset 1em -1em 0 #eee;
+    position:relative;
+}
+.panda::before,.panda::after {
+    content:'';
+    position:absolute;
+    width:7em;
+    height:4em;
+}
+.panda::before {
+    content:'';
+    position:absolute;
+    width:7em;
+    height:4em;
+    left:2.9em;
+    top:5.5em;
+    background-color:#333;
+    background-image:radial-gradient(circle at 5.1em 2em,white 0.3em,transparent 0.3em),radial-gradient(circle at 4.6em 2em,#333 0.7em,transparent 0.7em),radial-gradient(circle at 4.5em 2em,white 1em,transparent 1em);
+    border-radius:50% 50% 45% 42%;
+    transform:rotate(-45deg);
+    box-shadow:1em -7.2em 0 -0.4em #333;
+    animation:before-animate 1s ease-in-out infinite alternate;
+}
+.panda::after {
+    content:'';
+    position:absolute;
+    width:7em;
+    height:4em;
+    left:11.1em;
+    top:5.5em;
+    background-color:#333;
+    background-image:radial-gradient(circle at 2.4em 1.5em,white 0.3em,transparent 0.3em),radial-gradient(circle at 2.4em 2em,#333 0.7em,transparent 0.7em),radial-gradient(circle at 2.5em 2em,white 1em,transparent 1em);
+    border-radius:50% 50% 42% 45%;
+    transform:rotate(45deg);
+    box-shadow:-1em -7.2em 0 -0.4em #333;
+    animation:after-animate 1s ease-in-out infinite alternate -1s;
+}
+@keyframes before-animate {
+    to {
+        transform:rotate(-40deg);
+        background-image:radial-gradient(circle at 4.9em 1.8em,white 0.3em,transparent 0.3em),radial-gradient(circle at 4.4em 1.8em,#333 0.7em,transparent 0.7em),radial-gradient(circle at 4.5em 2em,white 1em,transparent 1em);
+    }
+}@keyframes after-animate {
+     to {
+         transform:rotate(40deg);
+         background-image:radial-gradient(circle at 2.6em 1.3em,white 0.3em,transparent 0.3em),radial-gradient(circle at 2.6em 1.8em,#333 0.7em,transparent 0.7em),radial-gradient(circle at 2.5em 2em,white 1em,transparent 1em);
+     }
+ }
+
+
+
+
+
+
+ .pcShow{
+     width: 100%;
+     height: 100%;
+     position: fixed;
+     top: 0;
+     left:0;
+     background: #eee;
+     color:#111;
+     font-size: 40px;
+     z-index: 20000;
+     text-align: center;
+     line-height: 200px;
+ }
+ .copyright{
+     position: absolute;
+     width: 100%;
+     height: 2em;
+     font-feature-settings: 20px;
+     color:gray;
+     background: #111;
+     bottom:0;
+     left: 50%;
+     transform:translateX(-50%);
+     line-height: 2em;
+     text-align: center;
+ }
+
+ .iframe{
+     position: absolute;
+     top: 5%;
+     left: 2%;
+     /*transform:rotateZ(-30deg);*/
+     width: 500px;
+     height: 561px;
+     padding:40px;
+     border-radius: 20px;
+     box-shadow: 5px 5px 5px #000,
+     -5px -5px 5px #222;
+ }
+ iframe{
+     width: 100%;
+     height: 561px;
+ }
+ .info-right{
+     right: 3%!important;
+ }
